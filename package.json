@@ -12,7 +12,9 @@
     "db:studio": "drizzle-kit studio",
     "db:migrate:test": "dotenv -e .env.test -- drizzle-kit migrate",
     "pretest": "npm run db:migrate:test",
-    "pretest:watch": "npm run db:migrate:test"
+    "pretest:watch": "npm run db:migrate:test",
+    "build": "tsup-node",
+    "start": "node dist/src/infra/http/server.mjs"
   },
   "keywords": [],
   "author": "",
@@ -24,6 +26,7 @@
     "@types/node": "^22.13.1",
     "dotenv-cli": "^8.0.0",
     "drizzle-kit": "^0.30.5",
+    "tsup": "^8.4.0",
     "tsx": "^4.19.2",
     "typescript": "^5.7.3",
     "vite-tsconfig-paths": "^5.1.4",
